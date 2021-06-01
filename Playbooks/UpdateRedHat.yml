@@ -1,9 +1,8 @@
----
-name: Running DNF to update the system.
-hosts:  rhel
-tasks:
-  - name: upgrade all packages
-    dnf:
-      name: "*"
-      state: latest
-...
+-
+  name: Running DNF to update the system.
+  hosts:  rhel
+  tasks:
+    - name: upgrade all packages
+      dnf:
+        name: "*"
+        state: latest
