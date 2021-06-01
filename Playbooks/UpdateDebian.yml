@@ -6,3 +6,4 @@
       apt:
         name: "*"
         state: latest
+      become: yes
