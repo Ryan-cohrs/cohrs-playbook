@@ -3,8 +3,8 @@
   tasks:
     - name: Upgrade all packages to the latest version
       apt:
-        name: "*"
-        state: latest
+        upgrade: dist
+        autoremove: yes
       become: yes
 
 - name: Running DNF to update the system.
