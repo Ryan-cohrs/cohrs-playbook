@@ -1,7 +1,7 @@
 - name: Running APT to update the system.
   hosts:  debian
   tasks:
-    - name: Upgrade all packages to the latest version
+    - name: Upgrade all packages to the latest version.
       apt:
         upgrade: dist
         autoremove: yes
@@ -10,8 +10,16 @@
 - name: Running DNF to update the system.
   hosts:  rhel
   tasks:
-    - name: Upgrade all packages to the latest version
+    - name: Upgrade all packages to the latest version.
       dnf:
         name: "*"
         state:  latest
       become: yes
+
+- name: Running Zypper to update the system.
+  hosts:  suse
+  tasks:
+    - name: Upgrade all packages to the latest version.
+      zypper: 
+        name: "*"
+        state:  latest
